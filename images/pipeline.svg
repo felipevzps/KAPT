@@ -1,0 +1,130 @@
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Arrow marker definition -->
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#000000"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="800" fill="white"/>
+  
+  <!-- Title -->
+  <text x="600" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="black" font-style="italic">
+    Kappaphycus alvarezii pan-transcriptome
+  </text>
+  
+  <!-- Workflow 1 Title -->
+  <text x="300" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="black">
+    Workflow 1: Montagem de Transcriptoma
+  </text>
+  
+  <!-- Workflow 1 Steps -->
+  <g id="workflow1">
+    <!-- Step 1 -->
+    <rect x="50" y="100" width="200" height="60" fill="white" stroke="black" stroke-width="2"/>
+    <text x="150" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="black">Download RNA-Seq</text>
+    
+    <!-- Arrow -->
+    <path d="M 150 170 L 150 190" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+    
+    <!-- Step 2 -->
+    <rect x="50" y="200" width="200" height="60" fill="white" stroke="black" stroke-width="2"/>
+    <text x="150" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="black">Controle de Qualidade</text>
+    <text x="150" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="black">(FastQC)</text>
+    
+    <path d="M 150 270 L 150 290" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+    
+    <!-- Step 3 -->
+    <rect x="50" y="300" width="200" height="60" fill="white" stroke="black" stroke-width="2"/>
+    <text x="150" y="325" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="black">Trimagem</text>
+    <text x="150" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="black">(bbduk)</text>
+    
+    <path d="M 150 370 L 150 390" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+    
+    <!-- Step 4 -->
+    <rect x="50" y="400" width="200" height="60" fill="white" stroke="black" stroke-width="2"/>
+    <text x="150" y="425" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="black">Controle de Qualidade</text>
+    <text x="150" y="445" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="black">(FastQC)</text>
+    
+    <path d="M 150 470 L 150 490" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+    
+    <!-- Step 5 -->
+    <rect x="50" y="500" width="200" height="60" fill="white" stroke="black" stroke-width="2"/>
+    <text x="150" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="black">Montagem de Transcriptoma</text>
+    <text x="150" y="545" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="black">(Trinity)</text>
+    
+    <!-- Horizontal arrow to next column -->
+    <path d="M 260 530 L 290 530" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+    
+    <!-- Step 6 -->
+    <rect x="300" y="500" width="200" height="60" fill="white" stroke="black" stroke-width="2"/>
+    <text x="400" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="black">Remoção de Redundância</text>
+    <text x="400" y="545" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="black">(MMseqs2)</text>
+    
+    <!-- Arrow UP -->
+    <path d="M 400 490 L 400 470" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+    
+    <!-- Step 7 -->
+    <rect x="300" y="400" width="200" height="60" fill="white" stroke="black" stroke-width="2"/>
+    <text x="400" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="black">Qualidade do Transcriptoma</text>
+    <text x="400" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="black">(TransRate, BUSCO, Salmon)</text>
+    
+    <!-- Arrow UP -->
+    <path d="M 400 390 L 400 370" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+    
+    <!-- Step 8 -->
+    <rect x="300" y="300" width="200" height="60" fill="white" stroke="black" stroke-width="2"/>
+    <text x="400" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="black">Inferência de CDS e Proteínas</text>
+    <text x="400" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="black">(TransDecoder)</text>
+    
+    <!-- Arrow UP -->
+    <path d="M 400 290 L 400 270" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+    
+    <!-- Step 9 -->
+    <rect x="300" y="200" width="200" height="60" fill="white" stroke="black" stroke-width="2"/>
+    <text x="400" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="black">Anotação Funcional das Proteínas</text>
+    <text x="400" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="black">(eggNOG-mapper)</text>
+  </g>
+  
+  <!-- Workflow 2 Title -->
+  <text x="900" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="black">
+    Workflow 2: Inferência do pan-transcriptoma
+  </text>
+  
+  <!-- Subtitle for Workflow 2 -->
+  <text x="900" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="black">
+    (Transcriptomas já montados)
+  </text>
+  
+  <!-- Workflow 2 Steps -->
+  <g id="workflow2">
+    <!-- Step 1 -->
+    <rect x="800" y="130" width="200" height="60" fill="white" stroke="black" stroke-width="2"/>
+    <text x="900" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="black">Inferência de Ortogrupos</text>
+    <text x="900" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="black">(OrthoFinder2)</text>
+    
+    <path d="M 900 200 L 900 220" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+    
+    <!-- Step 2 -->
+    <rect x="800" y="230" width="200" height="60" fill="white" stroke="black" stroke-width="2"/>
+    <text x="900" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="black">Classificação do Pan-transcriptoma</text>
+    <text x="900" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="black">(custom script)</text>
+    
+    <path d="M 900 300 L 900 320" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+    
+    <!-- Step 3 -->
+    <rect x="800" y="330" width="200" height="80" fill="white" stroke="black" stroke-width="2"/>
+    <text x="900" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="black">Enriquecimento Funcional</text>
+    <text x="900" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="black">dos Grupos do Pan-transcriptoma</text>
+    <text x="900" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="black">(topGO)</text>
+  </g>
+  
+  <!-- Connection between workflows -->
+  <path d="M 520 330 Q 650 330 780 160" stroke="#e53e3e" stroke-width="3" fill="none" stroke-dasharray="5,5"/>
+  <text x="650" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#e53e3e">
+    Proteínas inferidas
+  </text>
+  
+  <!-- Decorative elements removed -->
+</svg>
