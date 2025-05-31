@@ -16,10 +16,10 @@ include { salmonQuant                   } from "../modules/salmonQuant.nf"
 include { busco                         } from "../modules/busco.nf"
 include { transrate                     } from "../modules/transrate.nf"
 include { transdecoder                  } from "../modules/transdecoder.nf"
-include { eggNOG-mapper                 } from "../modules/eggNOG-mapper.nf"
+include { eggNOG_mapper                 } from "../modules/eggNOG-mapper.nf"
 
 workflow {
-    // read csv with samples (run = SRA Accession)
+    // read csv with samples (run = SRA Accession ID)
     samples_ch = Channel.fromPath(params.samples_csv)
                         .splitCsv(header: true)
 
@@ -59,23 +59,39 @@ workflow {
     trimmed_multiqc_ch = trimmed_fastqc_ch.map{ run, dir -> dir }.collect() | trimmed_multiqc
     trimmed_multiqc.out.view{ "trimmed_multiqc: $it" }
     
-    // assembly transcriptome (trinity)
+    // perform de novo transcriptome assembly
+    trinity_ch = trimmed_fastq_ch.map{ run, fastq_files -> fastq_files }.collect() | trinity
+    trinity.out.view{ "trinity: $it" }
 
     // cluster non-redundant transcripts (MMSeqs2)
+    //mmseqs2_ch = trinity_ch | MMSeqs2
+    //MMSeqs2.out.view{ "MMSeqs2: $it" }
+    // TODO: fix mmseqs2 - current conda package is returning (core dumped) error
 
     // run salmonIndex on assembled transcriptome
-    salmon_index_ch = salmonIndex(params.assembled_transcriptome) // TODO: declare assembled transcriptome
+    //salmon_index_ch = mmseqs2_ch | salmonIndex  
+    salmon_index_ch = trinity_ch | salmonIndex // NOTE: bypass to check if pipeline run without mmsqs2
     salmonIndex.out.view{ "salmonIndex: $it" }
     
     // run salmonQuant on assembled transcriptome 
     salmon_quant_ch = trimmed_fastq_ch.combine(salmon_index_ch) | salmonQuant
     salmonQuant.out.view{ "salmonQuant: $it" }
 
-    // evaluate completeness (busco)
+    // evaluate completeness (find orthologs in rhodophyta_odb12 database)
+    //busco_ch = mmseqs2_ch | busco 
+    busco_ch = trinity_ch | busco // NOTE: bypass to check if pipeline run without mmsqs2
+    busco.out.view{ "busco: $it" }
 
-    // evaluate transcriptome metrics (transrate)
+    // evaluate transcriptome metrics
+    //transrate_ch = mmseqs2_ch | transrate
+    transrate_ch = trinity_ch | transrate // NOTE: bypass to check if pipeline run without mmsqs2
 
-    // predict CDS and protein sequences (transdecoder)
+    // predict CDS and protein sequences
+    //transdecoder_ch = mmseqs2_ch | transdecoder 
+    transdecoder_ch = trinity_ch | transdecoder // NOTE: bypass to check if pipeline run without mmsqs2
+    transdecoder.out.view{ "transdecoder: $it" }
 
     // functional annotation of predicted proteins (eggNOG-mapper)
+    eggnog_ch = transdecoder_ch | eggNOG_mapper
+    eggNOG_mapper.out.view{ "eggNOG-mapper: $it" }
 }
