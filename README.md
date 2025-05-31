@@ -23,16 +23,6 @@ Ensure the following tools are installed before running the pipeline:
 git clone https://github.com/felipevzps/KAPT.git
 ```
 
-2. Create and activate our conda environment:
-
-```bash
-# creating conda environment
-conda env create -n KAPT -f environment.yml
-
-# activating environment
-conda activate KAPT
-```
-
 ---
 
 # how to run
@@ -41,7 +31,7 @@ From the project root directory, execute:
 
 ```bash
 # run the pipeline
-nextflow run workflows/KAPT.nf -c config/nextflow.config
+nextflow run workflows/KAPT.nf -c config/nextflow.config -resume -profile process_low,process_medium,process_high,sge --samples_csv samples/${bioproject}.csv --output_dir "../results/${bioproject}" --report_dir "report/${bioproject}"
 ```
 
 ---
