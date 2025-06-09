@@ -4,3 +4,4 @@ work/
 results/
 conda-cache/
 eggnog_database/
+*.sh.*
