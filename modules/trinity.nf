@@ -3,7 +3,7 @@ process trinity {
         path(trimmed_fastq_files)
 
     output:
-        path("trinity_out_dir.Trinity.fasta")
+        path("*Trinity.fasta")
 
     script:
         """
