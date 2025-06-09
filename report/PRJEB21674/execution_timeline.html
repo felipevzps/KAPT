@@ -1,6 +1,6 @@
 <!doctype html>
 <!--
-  ~ Copyright 2013-2024, Seqera Labs
+  ~ Copyright 2013-2023, Seqera Labs
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
   ~ you may not use this file except in compliance with the License.
@@ -19,7 +19,6 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<link rel="icon" type="image/png" href="https://www.nextflow.io/img/favicon.png" />
 <style type="text/css">
 * {
   font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
@@ -206,30 +205,16 @@ $(function() {
 
   // Nextflow report data
   window.data = {
-    "elapsed": "6.1s",
-    "beginningMillis": 1748601598527,
-    "endingMillis": 1748661729079,
+    "elapsed": "3h 51m 15s",
+    "beginningMillis": 1748684646910,
+    "endingMillis": 1748754200379,
     "processes": [
-        {"label": "getReadFTP (2)", "cached": true, "index": 0, "times": [{"starting_time": 1748601603956, "ending_time": 1748601604033}, {"starting_time": 1748601604033, "ending_time": 1748601608134, "label": "6.2s \/ 42.9 MB \/ CACHED"}, {"starting_time": 1748601608134, "ending_time": 1748601610156}]},
-        {"label": "getReadFTP (1)", "cached": true, "index": 0, "times": [{"starting_time": 1748601598527, "ending_time": 1748601598550}, {"starting_time": 1748601598550, "ending_time": 1748601602367, "label": "5.4s \/ 43.9 MB \/ CACHED"}, {"starting_time": 1748601602367, "ending_time": 1748601603933}]},
-        {"label": "downloadReadFTP (1)", "cached": true, "index": 1, "times": [{"starting_time": 1748601620274, "ending_time": 1748601620382}, {"starting_time": 1748601620382, "ending_time": 1748601977607, "label": "5m 59s \/ 20.9 MB \/ CACHED"}, {"starting_time": 1748601977607, "ending_time": 1748601979113}]},
-        {"label": "downloadReadFTP (2)", "cached": true, "index": 1, "times": [{"starting_time": 1748601620289, "ending_time": 1748601620387}, {"starting_time": 1748601620387, "ending_time": 1748601990935, "label": "6m 12s \/ 20.9 MB \/ CACHED"}, {"starting_time": 1748601990935, "ending_time": 1748601992444}]},
-        {"label": "bbduk (2)", "cached": true, "index": 2, "times": [{"starting_time": 1748602914573, "ending_time": 1748602914663}, {"starting_time": 1748602914663, "ending_time": 1748602977005, "label": "1m 4s \/ 952.6 MB \/ CACHED"}, {"starting_time": 1748602977005, "ending_time": 1748602978857}]},
-        {"label": "raw_fastqc (1)", "cached": true, "index": 3, "times": [{"starting_time": 1748602823723, "ending_time": 1748602823840}, {"starting_time": 1748602823840, "ending_time": 1748602869738, "label": "48s \/ 580.6 MB \/ CACHED"}, {"starting_time": 1748602869738, "ending_time": 1748602871711}]},
-        {"label": "raw_fastqc (2)", "cached": true, "index": 3, "times": [{"starting_time": 1748602871733, "ending_time": 1748602871811}, {"starting_time": 1748602871811, "ending_time": 1748602912489, "label": "42.8s \/ 636.8 MB \/ CACHED"}, {"starting_time": 1748602912489, "ending_time": 1748602914562}]},
-        {"label": "bbduk (1)", "cached": true, "index": 2, "times": [{"starting_time": 1748602978895, "ending_time": 1748602978957}, {"starting_time": 1748602978957, "ending_time": 1748603031976, "label": "55s \/ 954.6 MB \/ CACHED"}, {"starting_time": 1748603031976, "ending_time": 1748603033922}]},
-        {"label": "raw_multiqc", "cached": true, "index": 4, "times": [{"starting_time": 1748648432701, "ending_time": 1748648432786}, {"starting_time": 1748648432786, "ending_time": 1748648436027, "label": "5.2s \/ 140.4 MB \/ CACHED"}, {"starting_time": 1748648436027, "ending_time": 1748648437900}]},
-        {"label": "trimmed_fastqc (1)", "cached": true, "index": 5, "times": [{"starting_time": 1748603033930, "ending_time": 1748603034022}, {"starting_time": 1748603034022, "ending_time": 1748603077788, "label": "45.6s \/ 633.1 MB \/ CACHED"}, {"starting_time": 1748603077788, "ending_time": 1748603079486}]},
-        {"label": "trimmed_fastqc (2)", "cached": true, "index": 5, "times": [{"starting_time": 1748603079495, "ending_time": 1748603079586}, {"starting_time": 1748603079586, "ending_time": 1748603122256, "label": "44.3s \/ 649.3 MB \/ CACHED"}, {"starting_time": 1748603122256, "ending_time": 1748603123781}]},
-        {"label": "trinity", "cached": true, "index": 6, "times": [{"starting_time": 1748642193876, "ending_time": 1748642193978}, {"starting_time": 1748642193978, "ending_time": 1748648423010, "label": "1h 43m 51s \/ 8 GB \/ CACHED"}, {"starting_time": 1748648423010, "ending_time": 1748648424885}]},
-        {"label": "transdecoder", "cached": true, "index": 7, "times": [{"starting_time": 1748653268330, "ending_time": 1748653268378}, {"starting_time": 1748653268378, "ending_time": 1748653546032, "label": "4m 41s \/ 340.4 MB \/ CACHED"}, {"starting_time": 1748653546032, "ending_time": 1748653548896}]},
-        {"label": "trimmed_multiqc", "cached": true, "index": 8, "times": [{"starting_time": 1748648424906, "ending_time": 1748648424985}, {"starting_time": 1748648424985, "ending_time": 1748648430814, "label": "7.8s \/ 125.2 MB \/ CACHED"}, {"starting_time": 1748648430814, "ending_time": 1748648432686}]},
-        {"label": "transrate", "cached": true, "index": 9, "times": [{"starting_time": 1748659434955, "ending_time": 1748659435055}, {"starting_time": 1748659435055, "ending_time": 1748659435987, "label": "3.1s \/ 7.5 MB \/ CACHED"}, {"starting_time": 1748659435987, "ending_time": 1748659438098}]},
-        {"label": "salmonIndex", "cached": true, "index": 10, "times": [{"starting_time": 1748653254709, "ending_time": 1748653254728}, {"starting_time": 1748653254728, "ending_time": 1748653259856, "label": "7.3s \/ 96.2 MB \/ CACHED"}, {"starting_time": 1748653259856, "ending_time": 1748653262054}]},
-        {"label": "busco", "cached": true, "index": 11, "times": [{"starting_time": 1748653566749, "ending_time": 1748653566788}, {"starting_time": 1748653566788, "ending_time": 1748654005117, "label": "7m 22s \/ 2.6 GB \/ CACHED"}, {"starting_time": 1748654005117, "ending_time": 1748654008772}]},
-        {"label": "salmonQuant (2)", "cached": true, "index": 12, "times": [{"starting_time": 1748654008799, "ending_time": 1748654008872}, {"starting_time": 1748654008872, "ending_time": 1748654023680, "label": "16.4s \/ 360.3 MB \/ CACHED"}, {"starting_time": 1748654023680, "ending_time": 1748654025176}]},
-        {"label": "salmonQuant (1)", "cached": true, "index": 12, "times": [{"starting_time": 1748654025186, "ending_time": 1748654025276}, {"starting_time": 1748654025276, "ending_time": 1748654039866, "label": "16s \/ 360.8 MB \/ CACHED"}, {"starting_time": 1748654039866, "ending_time": 1748654041179}]},
-        {"label": "eggNOG_mapper", "cached": false, "index": 13, "times": [{"starting_time": 1748661726185, "ending_time": 1748661726200}, {"starting_time": 1748661726200, "ending_time": 1748661728063, "label": "1.9s \/ -"}]}
+        {"label": "getReadFTP (1)", "cached": true, "index": 0, "times": [{"starting_time": 1748684646910, "ending_time": 1748684650906}, {"starting_time": 1748684650906, "ending_time": 1748684656195, "label": "14.6s \/ 33.6 MB \/ CACHED"}, {"starting_time": 1748684656195, "ending_time": 1748684661503}]},
+        {"label": "downloadReadFTP (1)", "cached": true, "index": 1, "times": [{"starting_time": 1748684906541, "ending_time": 1748684910947}, {"starting_time": 1748684910947, "ending_time": 1748685272746, "label": "6m 9s \/ 14.3 MB \/ CACHED"}, {"starting_time": 1748685272746, "ending_time": 1748685276031}]},
+        {"label": "raw_fastqc (1)", "cached": true, "index": 2, "times": [{"starting_time": 1748687497500, "ending_time": 1748687502216}, {"starting_time": 1748687502216, "ending_time": 1748687654983, "label": "2m 45s \/ 1.5 GB \/ CACHED"}, {"starting_time": 1748687654983, "ending_time": 1748687662315}]},
+        {"label": "bbduk (1)", "cached": true, "index": 3, "times": [{"starting_time": 1748687557832, "ending_time": 1748687562283}, {"starting_time": 1748687562283, "ending_time": 1748687655581, "label": "1m 41s \/ 10.6 GB \/ CACHED"}, {"starting_time": 1748687655581, "ending_time": 1748687658413}]},
+        {"label": "trimmed_fastqc (1)", "cached": true, "index": 4, "times": [{"starting_time": 1748687660205, "ending_time": 1748687667430}, {"starting_time": 1748687667430, "ending_time": 1748687792364, "label": "2m 14s \/ 1.8 GB \/ CACHED"}, {"starting_time": 1748687792364, "ending_time": 1748687794540}]},
+        {"label": "trinity", "cached": false, "index": 5, "times": [{"starting_time": 1748740328032, "ending_time": 1748740331382}, {"starting_time": 1748740331382, "ending_time": 1748754194535, "label": "3h 51m 11s \/ 6.8 GB"}, {"starting_time": 1748754194535, "ending_time": 1748754198593}]}
     ]
 }
 ;
