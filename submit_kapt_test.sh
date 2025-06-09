@@ -11,4 +11,4 @@ bioproject=`basename ${samples/.csv}`
 
 module load nextflow
 
-/usr/bin/time -v nextflow run workflows/KAPT.nf -c config/nextflow.config -resume -profile process_low,process_medium,process_high,sge --samples_csv $samples --output_dir "../results/${bioproject}" --report_dir "report/${bioproject}"
+/usr/bin/time -v nextflow run workflows/KAPT.nf -c config/nextflow.config -resume -profile sge --samples_csv $samples --output_dir "../results/${bioproject}" --report_dir "report/${bioproject}"
