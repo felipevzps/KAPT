@@ -1,4 +1,6 @@
 process downloadReadFTP {
+    label "process_low"
+
     input:
         tuple val(run), path(json_file)
 
