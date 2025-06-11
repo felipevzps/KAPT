@@ -1,9 +1,11 @@
 process trinity {
+    label "process_high"
+
     input:
         path(trimmed_fastq_files)
 
     output:
-        path("*Trinity.fasta")
+        path("trinity_out_dir/Trinity.fasta")
 
     script:
         """
