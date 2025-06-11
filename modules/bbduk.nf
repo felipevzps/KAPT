@@ -1,4 +1,6 @@
 process bbduk {
+    label "process_medium"
+
     input:
         tuple val(run), path(fastq_read_list)
 
