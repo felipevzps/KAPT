@@ -1,4 +1,6 @@
 process MMSeqs2 {
+    label "process_medium"
+
     input:
         path(trinity_fasta)
  
