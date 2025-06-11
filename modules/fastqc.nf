@@ -1,4 +1,6 @@
 process fastqc {
+    label "process_low"
+
     input:
         tuple val(run), path(fastq_read_list)
 
