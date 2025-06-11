@@ -1,4 +1,6 @@
 process transrate {
+    label "process_medium"
+
     input:
         path(transcripts_fasta)
     
