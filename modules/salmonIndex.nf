@@ -1,4 +1,6 @@
 process salmonIndex {
+    label "process_low"
+
     input:
         path(reference_transcriptome)
 
