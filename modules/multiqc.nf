@@ -1,4 +1,6 @@
 process multiqc {
+    label "process_low"
+
     input:
         path(fastqc_dirs)
 
