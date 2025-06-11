@@ -1,4 +1,6 @@
 process salmonQuant {
+    label "process_medium"
+
     input:
         tuple val(run), path(trimmed_reads), path(salmon_index)
 
