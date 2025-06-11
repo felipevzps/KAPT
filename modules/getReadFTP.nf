@@ -1,4 +1,5 @@
 process getReadFTP {
+    label "process_low"
     maxForks 1  // limit parallel downloads: https://github.com/nextflow-io/nextflow/discussions/3415
     
     input:
