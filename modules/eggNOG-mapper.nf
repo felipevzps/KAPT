@@ -1,4 +1,6 @@
 process eggNOG_mapper {
+    label "process_medium"
+
     input:
         path(proteins_fasta)
     
