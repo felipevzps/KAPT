@@ -5,13 +5,12 @@ process eggNOG_mapper {
         path(proteins_fasta)
     
     output:
-        path("eggnog-mapper/*.emapper.annotations")
+        path("eggnog_annotations*")
     
     script:
         """
         emapper.py -i ${proteins_fasta} \
-        -output eggnog_annotations \
-        --output_dir eggnog-mapper \
+        --output eggnog_annotations \
         --cpu $task.cpus \
         --override \
         -m diamond \
