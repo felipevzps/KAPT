@@ -205,16 +205,23 @@ $(function() {
 
   // Nextflow report data
   window.data = {
-    "elapsed": "3h 51m 15s",
-    "beginningMillis": 1748684646910,
-    "endingMillis": 1748754200379,
+    "elapsed": "10h 4s",
+    "beginningMillis": 1750288959534,
+    "endingMillis": 1750997513970,
     "processes": [
-        {"label": "getReadFTP (1)", "cached": true, "index": 0, "times": [{"starting_time": 1748684646910, "ending_time": 1748684650906}, {"starting_time": 1748684650906, "ending_time": 1748684656195, "label": "14.6s \/ 33.6 MB \/ CACHED"}, {"starting_time": 1748684656195, "ending_time": 1748684661503}]},
-        {"label": "downloadReadFTP (1)", "cached": true, "index": 1, "times": [{"starting_time": 1748684906541, "ending_time": 1748684910947}, {"starting_time": 1748684910947, "ending_time": 1748685272746, "label": "6m 9s \/ 14.3 MB \/ CACHED"}, {"starting_time": 1748685272746, "ending_time": 1748685276031}]},
-        {"label": "raw_fastqc (1)", "cached": true, "index": 2, "times": [{"starting_time": 1748687497500, "ending_time": 1748687502216}, {"starting_time": 1748687502216, "ending_time": 1748687654983, "label": "2m 45s \/ 1.5 GB \/ CACHED"}, {"starting_time": 1748687654983, "ending_time": 1748687662315}]},
-        {"label": "bbduk (1)", "cached": true, "index": 3, "times": [{"starting_time": 1748687557832, "ending_time": 1748687562283}, {"starting_time": 1748687562283, "ending_time": 1748687655581, "label": "1m 41s \/ 10.6 GB \/ CACHED"}, {"starting_time": 1748687655581, "ending_time": 1748687658413}]},
-        {"label": "trimmed_fastqc (1)", "cached": true, "index": 4, "times": [{"starting_time": 1748687660205, "ending_time": 1748687667430}, {"starting_time": 1748687667430, "ending_time": 1748687792364, "label": "2m 14s \/ 1.8 GB \/ CACHED"}, {"starting_time": 1748687792364, "ending_time": 1748687794540}]},
-        {"label": "trinity", "cached": false, "index": 5, "times": [{"starting_time": 1748740328032, "ending_time": 1748740331382}, {"starting_time": 1748740331382, "ending_time": 1748754194535, "label": "3h 51m 11s \/ 6.8 GB"}, {"starting_time": 1748754194535, "ending_time": 1748754198593}]}
+        {"label": "getReadFTP (1)", "cached": true, "index": 0, "times": [{"starting_time": 1750288959534, "ending_time": 1750288962145}, {"starting_time": 1750288962145, "ending_time": 1750288967737, "label": "17.6s \/ 33.6 MB \/ CACHED"}, {"starting_time": 1750288967737, "ending_time": 1750288977093}]},
+        {"label": "downloadReadFTP (1)", "cached": true, "index": 1, "times": [{"starting_time": 1750289298252, "ending_time": 1750289302110}, {"starting_time": 1750289302110, "ending_time": 1750289659489, "label": "6m 4s \/ 14.8 MB \/ CACHED"}, {"starting_time": 1750289659489, "ending_time": 1750289662258}]},
+        {"label": "bbduk (1)", "cached": true, "index": 2, "times": [{"starting_time": 1750290087981, "ending_time": 1750290092619}, {"starting_time": 1750290092619, "ending_time": 1750290201294, "label": "1m 55s \/ 2.4 GB \/ CACHED"}, {"starting_time": 1750290201294, "ending_time": 1750290202652}]},
+        {"label": "raw_fastqc (1)", "cached": true, "index": 3, "times": [{"starting_time": 1750290042176, "ending_time": 1750290047587}, {"starting_time": 1750290047587, "ending_time": 1750290176196, "label": "2m 20s \/ 478.3 MB \/ CACHED"}, {"starting_time": 1750290176196, "ending_time": 1750290182649}]},
+        {"label": "trimmed_fastqc (1)", "cached": true, "index": 4, "times": [{"starting_time": 1750290202863, "ending_time": 1750290207650}, {"starting_time": 1750290207650, "ending_time": 1750290326502, "label": "2m 5s \/ 493.8 MB \/ CACHED"}, {"starting_time": 1750290326502, "ending_time": 1750290327672}]},
+        {"label": "trinity", "cached": true, "index": 5, "times": [{"starting_time": 1750290202974, "ending_time": 1750290207653}, {"starting_time": 1750290207653, "ending_time": 1750301431270, "label": "3h 7m 8s \/ 7.8 GB \/ CACHED"}, {"starting_time": 1750301431270, "ending_time": 1750301431405}]},
+        {"label": "raw_multiqc", "cached": true, "index": 6, "times": [{"starting_time": 1750290182944, "ending_time": 1750290187649}, {"starting_time": 1750290187649, "ending_time": 1750290209832, "label": "29.7s \/ 73.7 MB \/ CACHED"}, {"starting_time": 1750290209832, "ending_time": 1750290212651}]},
+        {"label": "trimmed_multiqc", "cached": true, "index": 7, "times": [{"starting_time": 1750290327859, "ending_time": 1750290332662}, {"starting_time": 1750290332662, "ending_time": 1750290338571, "label": "9.8s \/ 73.7 MB \/ CACHED"}]},
+        {"label": "transrate", "cached": true, "index": 8, "times": [{"starting_time": 1750301431831, "ending_time": 1750301436408}, {"starting_time": 1750301436408, "ending_time": 1750301455241, "label": "24.6s \/ 202.8 MB \/ CACHED"}, {"starting_time": 1750301455241, "ending_time": 1750301456410}]},
+        {"label": "salmonIndex", "cached": true, "index": 9, "times": [{"starting_time": 1750433280923, "ending_time": 1750433285990}, {"starting_time": 1750433285990, "ending_time": 1750433320709, "label": "43.8s \/ 136.6 MB \/ CACHED"}, {"starting_time": 1750433320709, "ending_time": 1750433324745}]},
+        {"label": "salmonQuant (1)", "cached": true, "index": 10, "times": [{"starting_time": 1750433324967, "ending_time": 1750433334744}, {"starting_time": 1750433334744, "ending_time": 1750433398021, "label": "1m 10s \/ 448.1 MB \/ CACHED"}]},
+        {"label": "transdecoder", "cached": true, "index": 11, "times": [{"starting_time": 1750307990636, "ending_time": 1750307994217}, {"starting_time": 1750307994217, "ending_time": 1750308384081, "label": "6m 39s \/ 392 MB \/ CACHED"}, {"starting_time": 1750308384081, "ending_time": 1750308389209}]},
+        {"label": "eggNOG_mapper", "cached": false, "index": 12, "times": [{"starting_time": 1750961613159, "ending_time": 1750961617613}, {"starting_time": 1750961617613, "ending_time": 1750997466844, "label": "9h 58m 19s \/ 6.8 GB"}, {"starting_time": 1750997466844, "ending_time": 1750997511912}]}
     ]
 }
 ;

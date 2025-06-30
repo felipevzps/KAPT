@@ -1,0 +1,8 @@
+task_id	hash	native_id	name	status	exit	submit	duration	realtime	%cpu	peak_rss	peak_vmem	rchar	wchar
+1	49/882309	87539	getReadFTP (1)	CACHED	0	2025-06-27 01:40:26.638	33.9s	15s	4.5%	33.7 MB	279.9 MB	5.1 MB	13.1 KB
+2	7c/4306d3	87540	downloadReadFTP (1)	CACHED	0	2025-06-27 01:41:00.761	16m 55s	16m 42s	2.8%	14.9 MB	674.8 MB	4.1 GB	2.8 GB
+4	e1/33e967	87541	bbduk (1)	CACHED	0	2025-06-27 01:57:55.846	9m 15s	8m 50s	501.3%	3.3 GB	47.9 GB	31.5 GB	31.6 GB
+3	2c/417b1d	87542	raw_fastqc (1)	CACHED	0	2025-06-27 01:57:55.950	6m 45s	6m 17s	99.2%	432.9 MB	4 GB	2.8 GB	3.7 MB
+5	13/7482bb	87544	trimmed_fastqc (1)	CACHED	0	2025-06-27 02:07:10.946	7m 50s	7m 2s	82.3%	505.3 MB	4.1 GB	2.9 GB	3.5 MB
+8	a5/c9c01c	87546	trimmed_multiqc	CACHED	0	2025-06-27 02:15:08.415	8m 4s	4m 52s	3.5%	75.8 MB	2.2 GB	18.7 MB	2.4 MB
+7	e3/3efe14	87543	raw_multiqc	CACHED	0	2025-06-27 02:04:40.984	34.7s	24.5s	40.1%	85 MB	2.2 GB	18.7 MB	2.5 MB
