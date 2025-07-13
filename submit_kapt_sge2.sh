@@ -4,7 +4,6 @@
 #$ -V
 #$ -cwd
 #$ -pe smp 1
-#$ -l h=neotera
 #$ -t 1
 
 samples=`ls -1 samples_test/*.csv | head -n $SGE_TASK_ID | tail -n1`
