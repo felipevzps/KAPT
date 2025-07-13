@@ -2,4 +2,6 @@ channels:
   - conda-forge
   - bioconda
 dependencies:
+  - conda-forge::libxcrypt1
+  - conda-forge::ruby=2.5.7
   - bioconda::transrate=1.0.3
