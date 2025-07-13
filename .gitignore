@@ -1,8 +1,20 @@
+# nextflow logs
 *.nextflow
 .nextflow.log*
 work/
+
+# large files
 results/
+
+# downloaded conda environments (from envs/*.yml)
 conda-cache/
+
+# eggNOG-mapper and BUSCO database
 eggnog_database/
+busco_downloads/
+
+# test samples
 samples_test/
+
+# .stdout and .err logs
 *.sh.*
