@@ -13,6 +13,8 @@ process busco {
         -o busco_results \
         -m transcriptome \
         -l rhodophyta_odb12 \
+        --download_path ${params.busco_db_path} \
+        --offline \
         --cpu $task.cpus \
         """
 }
