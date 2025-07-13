@@ -6,11 +6,10 @@
 #$ -pe smp 1
 #$ -t 1
 
-module load miniconda3
-conda activate conda-cache/busco-379626b8a96e73f18d9ee54550a9f47b
+# use busco available in the cluster
+module load BUSCO/5.7.0
 
 database_path="/Storage/data2/felipe.peres/KAPT/busco_database/"
 
-
 # downloading rhodophyta_odb12 database
-/usr/bin/time -v busco --datasets_version odb12 --download rhodophyta --download_path $database_path
+/usr/bin/time -v busco --datasets_version odb12 --download rhodophyta_odb12 --download_path $database_path
