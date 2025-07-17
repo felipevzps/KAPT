@@ -9,7 +9,7 @@
 # use busco available in the cluster
 module load BUSCO/5.7.0
 
-database_path="/Storage/data2/felipe.peres/KAPT/busco_database/"
+busco_db_path="/Storage/data2/felipe.peres/KAPT/busco_downloads/"
 
 # downloading rhodophyta_odb12 database
-/usr/bin/time -v busco --datasets_version odb12 --download rhodophyta_odb12 --download_path $database_path
+/usr/bin/time -v busco --datasets_version odb12 --download rhodophyta_odb12 --download_path $busco_db_path
