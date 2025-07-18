@@ -1,7 +1,7 @@
 # KAPT
 [![Nextflow](https://img.shields.io/badge/workflow-nextflow-blue)](https://www.nextflow.io/) [![Status](https://img.shields.io/badge/status-active-success.svg)]() [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)  
 
-Automated inference of the Kappaphycus alvarezii pan-transcriptome through de novo assembly and comprehensive functional annotation.
+Automated inference of the Kappaphycus alvarezii proteome through de novo transcriptome assembly and comprehensive functional annotation.
 
 ---
 
