@@ -1,9 +1,0 @@
-task_id	hash	native_id	name	status	exit	submit	duration	realtime	%cpu	peak_rss	peak_vmem	rchar	wchar
-1	93/62d5cc	86885	getReadFTP (1)	CACHED	0	2025-06-18 20:22:39.534	17.6s	5.6s	14.7%	33.6 MB	279.9 MB	5.1 MB	12.2 KB
-2	08/e5933f	86886	downloadReadFTP (1)	CACHED	0	2025-06-18 20:28:18.252	6m 4s	5m 57s	6.2%	14.8 MB	674.8 MB	2.6 GB	1.7 GB
-4	ad/4d508f	86888	bbduk (1)	CACHED	0	2025-06-18 20:41:27.981	1m 55s	1m 49s	635.7%	2.4 GB	47.5 GB	11 GB	11 GB
-3	5e/e62ee3	1500	raw_fastqc (1)	COMPLETED	0	2025-07-13 19:13:12.054	3m 9s	2m 15s	97.8%	351 MB	3.4 GB	1.7 GB	3.7 MB
-5	f4/b41f48	1501	trimmed_fastqc (1)	COMPLETED	0	2025-07-13 19:13:12.133	3m 24s	3m 6s	96.5%	286 MB	3.4 GB	1.8 GB	3.9 MB
-7	15/6c0d31	1503	raw_multiqc	COMPLETED	0	2025-07-13 19:16:21.393	34.8s	7.8s	138.4%	113.4 MB	10.3 GB	44.4 MB	17.8 MB
-8	ff/cdd8c7	1504	trimmed_multiqc	COMPLETED	0	2025-07-13 19:16:36.315	34.8s	3.2s	340.1%	97.3 MB	10.3 GB	44.5 MB	17.9 MB
-6	71/a8680c	1502	trinity	FAILED	140	2025-07-13 19:13:12.211	4m 14s	3m 40s	-	-	-	-	-
